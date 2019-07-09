@@ -19,9 +19,14 @@ header{
 	margin-bottom: 35px;
 }
 
+header .wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .logo-block{
-	width: 23.51%;
-	float: left;
+	
+	
 }
 
 .logo-block .phone{
@@ -71,6 +76,7 @@ header{
 	font-size: 1.18em;
 	color: #5e5e5e;
 	font-family: 'Roboto Condensed', sans-serif;
+	margin:0 auto;
 }
 .menu{
 	
@@ -81,12 +87,14 @@ header{
 	list-style: none;
 	margin: 0;
   	padding: 0;
-	width: 70%;
-	float: right;
-	margin: 9.4% 60px 0 0;
+  	display: flex;
+  	flex-wrap: wrap;
+
+	
 }
 .menu-list li{
-	display: inline-flex;
+	align-self: flex-end;
+	
 }
 .menu-list li:not(:first-child){
 	margin-left: 30px;
@@ -104,7 +112,6 @@ header{
 }
 
 .menuToggle{
-	float: right;
 	display: none;
 	cursor: pointer;
 	width: 45px;
@@ -713,7 +720,7 @@ p.author{
 
 @media screen and (max-width: 768px) {
 	.logo-block{
-		width: 40%;
+
 	}
 	.menu{
 		width: 60%;
@@ -742,6 +749,7 @@ p.author{
 
 	.menuToggle{
 		display: block;
+		margin-left: 60%;
 		margin-top: 30px;
 	}
 }
@@ -769,5 +777,8 @@ p.author{
 	.logo-text{
 		font-size: 0.65em;
 
+	}
+	.menuToggle{
+		margin-left: 7%;
 	}
 }
