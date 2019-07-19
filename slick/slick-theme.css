@@ -163,9 +163,9 @@
     color: transparent;
     border: 0;
     outline: none;
-    background: transparent;
+    background: #fff;
 }
-.slick-dots li button:hover,
+/*.slick-dots li button:hover,
 .slick-dots li button:focus
 {
     outline: none;
@@ -202,3 +202,4 @@
     opacity: .75;
     color: black;
 }
+*/

@@ -15,6 +15,10 @@
 	content: "";
 }
 
+body{
+	margin: 0 auto;
+}
+
 header{
 	margin-bottom: 35px;
 }
@@ -161,6 +165,7 @@ header .wrap{
 .slider-block{
 	width: 100%;
 	margin-bottom:60px;
+	display: flex;
 }
 
 .first-block{
@@ -176,13 +181,15 @@ header .wrap{
 	width: 50%;
 	float: right;
 	background: url('image/second-img.jpg') no-repeat;
+	display: flex;
 	background-size: cover;
 }
 .second-block .show-block{
 	background: rgba(255, 255, 255, 0.5);
 	width: 49.11%;
 	padding: 41px 0 42px 0;
-	margin:20.8% 0 0 11.80%;
+	align-self: center;
+	margin-left: 11.80%;
 }
 
 .show-block h2{
@@ -217,7 +224,7 @@ header .wrap{
 	height: 64px;
 	border: none;
 	position: absolute;
-	top:calc(100% - 300px);
+	align-self: center;
 	z-index: 1;
 }
 
@@ -228,8 +235,9 @@ header .wrap{
 	border: none;
 	z-index: 1;
 	position: absolute;
+	align-self: center;
 	left:calc(100% - 60px);
-	bottom:calc(100% - 270px);
+	
 }
 
 .info-block{
@@ -368,10 +376,17 @@ header .wrap{
 	color:#79797a;
 	font-size: 0.68em;
 	font-family: 'Roboto Condensed', sans-serif;
-	text-align: left;
 	text-align: center;
+	margin: 0;
 }
 
+.info-item table td{
+	border-collapse: collapse;
+	vertical-align: top;
+}
+.info-item table tr:nth-child(2){
+	height: 75px;
+}
 .price-block{
 	padding: 60px 0 0 0;
 }
@@ -410,18 +425,20 @@ header .wrap{
 }
 
 .price-list{
-	/*display: flex;
-	justify-content: center;
+	display: flex;
+	
+	margin: 0 auto;
+	/*justify-content: center;
 	align-items: center;*/
 }
 
-.price-list .price-item{
-	width: 17%;
+.price-item{
+	margin-left: 32px;
 }
 
 .price-item table{
 	border-collapse: collapse;
-	/*width: 100%;*/
+	width: 100%;
 }
 
 .price-item table td{
@@ -467,6 +484,32 @@ header .wrap{
 	padding-right: 5px;
 }
 
+
+.price-list .slick-list{
+	width: 96.53%;
+}
+
+.price-item .slick-slide{
+	width: 22.90%;
+}
+.nth-prev{
+	background: url('image/nth-prev.png') no-repeat;
+	width: 16px;
+	height: 34px;
+	border: none;
+	align-self: center;
+	margin-right: 2%;
+}
+
+.nth-next{
+	background: url('image/nth-next.png') no-repeat;
+	width: 16px;
+	height: 34px;
+	border: none;
+	align-self: center;
+	margin-left: 2%;
+}
+
 .reviews-block{
 	background:#f8f9fb;
 	padding: 59px 0 0 0;
@@ -507,11 +550,44 @@ header .wrap{
 
 .reviews-list{}
 
-.reviews-list>div{
+.reviews-list .slick-slide{
 	border:1px solid #edf0f4;
 	background: #fcfcfd;
-	width: 30.36%;
-	padding: 15px 0 25px 0;
+	width: 30%;
+	padding: 20px 0 30px 0;
+}
+
+.reviews-list .slick-slide:not(:first-child){
+	margin-left: 30px;
+}
+.reviews-list>div{
+	
+}
+
+.reviews-list .slick-dots{
+	list-style: none;
+	position: relative;
+	padding-bottom: 20px;
+}
+.reviews-list .slick-dots li{
+	margin:0;
+	
+}
+
+
+.reviews-list .slick-dots button{
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	font-size: 0;
+	line-height: 0;
+	border: 1px solid #a9a9a9;
+	padding: 0;
+	outline: none;
+	border-radius: 50%;
+}
+.slick-dots .slick-active button{
+	background: #a9a9a9;
 }
 .first-text{
 	font-size: 2em;
@@ -716,6 +792,9 @@ p.author{
 	.menu-list li a{
 		font-size: 0.75em;
 	}
+	.second-block .show-block{
+		width: 60%;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -752,6 +831,19 @@ p.author{
 		margin-left: 60%;
 		margin-top: 30px;
 	}
+	.second-block .show-block{
+		width: 65%;
+	}
+	.show-block h2{
+		font-size: 1.8em;
+	}
+
+	.show-block p{
+		font-size: 0.87em;
+	}
+	.info-list .info-item{
+		width: 25%;
+	}
 }
 
 @media screen and (max-width: 320px){
@@ -780,5 +872,64 @@ p.author{
 	}
 	.menuToggle{
 		margin-left: 7%;
+	}
+	.first-block{
+		float: none;
+		width: 100%;
+		height:200px;
+	}
+
+	.prev-btn{
+		width: 40px;
+		height: 44px;
+		background-size: 100%;
+	}
+	.next-btn{
+		width: 40px;
+		height: 44px;
+		background-size: 100%;
+		left: calc(100% - 40px);
+	}
+
+	.second-block{
+		float: none;
+		width: 100%;
+		height:200px;
+		justify-content: center;
+	}
+
+	.second-block .show-block{
+		padding: 10px 0px;
+		margin-left: 0px;
+
+	}
+	.show-block h2{
+		font-size: 1em;
+		margin-bottom: 5px;
+	}
+
+
+	.show-block p{
+		font-size: 0.75em;
+	}
+
+	.show-block #btn-show{
+		font-size: 0.75em;
+		padding: 10px 25px;
+	}
+
+	.info-list .info-item{
+		width: 35%;
+		margin-right: 35px;
+	}
+	.flex-container{
+		flex-wrap: wrap;
+		align-items: inherit;
+	}
+	.news-item{
+		width: 100%;
+	}
+	.news-item:not(:first-child){
+		margin: 30px 0 0 0;
 	}
 }

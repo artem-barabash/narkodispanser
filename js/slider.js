@@ -12,13 +12,26 @@ $(document).ready(function () {
 		$('.price-list').slick({
 			infinite: true,
 			slidesToShow: 4,
-			slidesToScroll: 4
+			slidesToScroll: 4,
+			variableWidth: true,
+			prevArrow: '<button class="nth-prev"></button>',
+    		nextArrow: '<button class="nth-next"></button>'
 		});
 
 		$('.reviews-list').slick({
 			infinite: true,
 			slidesToShow: 3,
-			slidesToScroll: 3
+			slidesToScroll: 3,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 320,
+					settings: {
+						slidesToShow: 1,
+  						adaptiveHeight: true
+					}
+				}
+			]
 		});
     });
 });
