@@ -744,6 +744,105 @@ p.author{
 	width: 100%;
 }
 
+footer{
+	background: #013c85;
+	overflow: hidden;
+}
+.footer-content{
+	padding: 30px 0;
+
+}
+.footer-content .wrap{
+	display: flex;
+}
+.footer-content .wrap>div{
+	width: 30.52%;
+}
+.footer-menu h3{
+	font-size: 0.8125em;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.footer-menu ul{
+	list-style-type: none; 
+	padding: 0px;
+	width: 70%;
+}
+.footer-menu ul li{
+	color: #a0a0a0;
+	font-size: 1em;
+}
+.footer-menu ul li:not(:first-child){
+	margin-top: 10px;
+}
+.footer-menu ul li:before{
+	content: "> ";
+}
+
+.footer-menu ul li a{
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #a0a0a0;
+	font-size: 0.6875em;
+	
+}
+.footer-menu ul li:hover{
+	color: #fff;
+}
+.footer-menu ul li a:hover{
+	color: #fff;
+}
+
+.footer-our-contact{
+
+}
+
+.footer-contact h3{
+	font-size: 0.8125em;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.footer-contact ul{
+	list-style-type: none; 
+	padding: 0px;
+}
+.footer-contact ul li{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #eaeaea;
+	font-size: 0.6875em;
+}
+.footer-contact ul li:not(:first-child){
+	margin-top: 10px;
+}
+.footer-our-contact h3{
+	font-size: 0.8125em;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.footer-our-contact p{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #eaeaea;
+	font-size: 0.6875em;
+	width: 50%;
+}
+.footer-caption{
+	overflow: hidden;
+	background: #001b3d;
+	width: 100%;
+	padding: 5px 0;
+}
+.footer-caption p{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #999999;
+	font-size: 0.6875em;
+}
 
 @media screen and (max-width: 1920px){
 	.logo-block{
@@ -844,6 +943,9 @@ p.author{
 	.info-list .info-item{
 		width: 25%;
 	}
+	.footer-content .wrap>div{
+		width: 40%;
+	}
 }
 
 @media screen and (max-width: 320px){
@@ -931,5 +1033,12 @@ p.author{
 	}
 	.news-item:not(:first-child){
 		margin: 30px 0 0 0;
+	}
+	.footer-content .wrap{
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer-content .wrap>div{
+		width: 100%;
 	}
 }
