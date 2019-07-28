@@ -144,8 +144,6 @@ header .wrap{
 
  .menuToggle.menu-state-open span:nth-child(1){
 	top: 0px;
-	width: 0%
-	left:50%;
 	transform: rotate(45deg);
 }
 
@@ -156,8 +154,6 @@ header .wrap{
 
  .menuToggle.menu-state-open span:nth-child(4){
 	top: 0px;
-	width: 0%
-	left:50%;
 	transform: rotate(-45deg);
 }
 
@@ -432,7 +428,7 @@ header .wrap{
 }
 
 .price-item{
-	margin-left: 32px;
+	padding: 0 16px;
 }
 
 .price-item table{
@@ -871,7 +867,6 @@ footer{
 	.logo-block .phone-text{
 		letter-spacing: 7px;
 		font-size: 0.75em;
-
 	}
 	.logo-caption-1,
 	.logo-caption-2{

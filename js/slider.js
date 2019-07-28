@@ -10,12 +10,25 @@ $(document).ready(function () {
 
 
 		$('.price-list').slick({
-			infinite: true,
+			//infinite: true,
 			slidesToShow: 4,
 			slidesToScroll: 4,
-			variableWidth: true,
+			//variableWidth: true,
 			prevArrow: '<button class="nth-prev"></button>',
-    		nextArrow: '<button class="nth-next"></button>'
+    		nextArrow: '<button class="nth-next"></button>',
+    		responsive: [{
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 2,
+		        infinite: true
+		      }
+		    },{
+		      breakpoint: 479,
+		      settings: {
+		        slidesToShow: 1,
+		        infinite: true
+		      }
+		    }]
 		});
 
 		$('.reviews-list').slick({
@@ -23,15 +36,13 @@ $(document).ready(function () {
 			slidesToShow: 3,
 			slidesToScroll: 3,
 			dots: true,
-			responsive: [
-				{
-					breakpoint: 320,
-					settings: {
-						slidesToShow: 1,
-  						adaptiveHeight: true
-					}
-				}
-			]
+			responsive: [{
+		      breakpoint: 479,
+		      settings: {
+		        slidesToShow: 1,
+		        infinite: true
+		      }
+		    }]
 		});
     });
 });

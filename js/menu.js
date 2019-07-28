@@ -11,9 +11,7 @@ $(document).ready(function(){
                 $(this).removeAttr('style');
                 $('.menuToggle').removeClass(current);
             }
-
        });
 
     });
-
 });
